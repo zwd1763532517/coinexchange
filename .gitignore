@@ -1,0 +1,49 @@
+target/
+logs/
+log/
+!.mvn/wrapper/maven-wrapper.jar
+**/*.ttf
+**/*.otf
+##**/*.png
+##**/*.jpg
+**/*.log
+
+*.jar
+mvnw
+mvnw.cmd
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### project
+/iprp-core/target
+/iprp-core/iprp-core.iml
+/iprp-common/target
+/iprp-common/iprp-common.iml
+/iprp-web/iprp.iml
+/iprp-web/target
+
+### maven
+.mvn/
+mvnw
+mvnw.cmd
+
+*/.DS_Store
+.DS_Store
+
+### commitizen ###
+node_modules/
+package-lock.json
+package.json
+uploadWar.sh
