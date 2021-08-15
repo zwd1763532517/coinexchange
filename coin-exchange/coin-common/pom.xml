@@ -35,9 +35,7 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.3.2</version>
         </dependency>
-
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -46,13 +44,11 @@
         <dependency>
             <groupId>com.alicp.jetcache</groupId>
             <artifactId>jetcache-starter-redis</artifactId>
-            <version>2.6.0</version>
         </dependency>
 
         <dependency>
             <groupId>io.springside</groupId>
             <artifactId>springside-utils</artifactId>
-            <version>5.0.0-RC1</version>
         </dependency>
 
         <dependency>
