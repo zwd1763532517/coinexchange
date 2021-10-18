@@ -19,6 +19,12 @@ spring:
             - Path=/admin/**
           filters:
             - StripPrefix=1
+        - id: member-service_router
+          uri: lb://member-service
+          predicates:
+            - Path=/user/**
+          filters:
+            - StripPrefix=1
         - id: test_router
           uri: https://www.baidu.com
           predicates:
@@ -27,7 +33,7 @@ spring:
             - StripPrefix=1
     sentinel:
       transport:
-        dashboard: sentinel-server:8080
+        dashboard: sentinel-server:8858
       datasource:
 #        ds1.file:
 #          file: classpath:gw-flow.json
