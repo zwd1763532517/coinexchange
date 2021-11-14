@@ -31,7 +31,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
     private JdbcTemplate jdbcTemplate;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         String loginType = requestAttributes.getRequest().getParameter("login_type");
         if (StringUtils.isEmpty(loginType)) {

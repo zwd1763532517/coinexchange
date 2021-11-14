@@ -2,7 +2,8 @@ package com.bjsxt.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.bjsxt.domain.AdminBank;
-import com.bjsxt.domain.Config;
+import com.bjsxt.dto.AdminBankDto;
+import com.bjsxt.feign.AdminBankServiceFeign;
 import com.bjsxt.response.R;
 import com.bjsxt.service.AdminBankService;
 import io.swagger.annotations.Api;
@@ -14,10 +15,12 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @Api(tags = "银行卡配置")
 @RequestMapping("/adminBanks")
-public class AdminBankController {
+public class AdminBankController implements AdminBankServiceFeign {
 
     @Autowired
     private AdminBankService adminBankService;
@@ -81,6 +84,11 @@ public class AdminBankController {
         }
         return R.fail();
     }
-    
 
+
+    @Override
+    public List<AdminBankDto> getAllAdminBanks() {
+        List<AdminBankDto> adminBankDtos = adminBankService.getAllAdminBanks() ;
+        return adminBankDtos;
+    }
 }

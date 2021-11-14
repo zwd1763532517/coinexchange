@@ -3,6 +3,10 @@ package com.bjsxt.service;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.bjsxt.domain.AdminBank;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.bjsxt.dto.AdminBankDto;
+
+import java.util.List;
+
 public interface AdminBankService extends IService<AdminBank>{
 
     /**
@@ -12,4 +16,10 @@ public interface AdminBankService extends IService<AdminBank>{
      * @return
      */
     Page<AdminBank> findByPage(Page<AdminBank> page, String bankCard);
+
+    /**
+     *
+     * @return
+     */
+    List<AdminBankDto> getAllAdminBanks();
 }

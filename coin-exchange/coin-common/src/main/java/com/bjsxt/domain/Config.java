@@ -3,8 +3,9 @@ package com.bjsxt.domain;
 import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 import lombok.Data;
+
+import java.util.Date;
 
 @ApiModel(value="com.bjsxt.domain.Config")
 @Data

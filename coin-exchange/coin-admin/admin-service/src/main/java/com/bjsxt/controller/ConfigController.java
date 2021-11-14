@@ -32,7 +32,7 @@ public class ConfigController {
             @ApiImplicitParam(name = "size",value = "后台参数类型"),
     })
     @PreAuthorize("hasAuthority('config_query')")
-    public R<Page<Config>> findByPage(@ApiIgnore Page<Config> page,String type,String code,String name){
+    public R<Page<Config>> findByPage(@ApiIgnore Page<Config> page, String type, String code, String name){
         Page<Config> configPage = configService.findByPage(page,type,name,code);
         return R.ok(configPage);
     }

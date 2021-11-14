@@ -70,6 +70,10 @@ public class UserAddress {
     @ApiModelProperty(value="null")
     private Long markid;
 
+    @TableField(exist = false)
+    @ApiModelProperty(value = "币种名称")
+    private String coinName = "测试币种";
+
     public static final String COL_USER_ID = "user_id";
 
     public static final String COL_COIN_ID = "coin_id";

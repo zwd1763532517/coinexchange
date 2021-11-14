@@ -24,7 +24,7 @@ public class LoginConstant {
 
     public static final String ADMIN_CODE = "ROLE_ADMIN";
 
-//会员登录
+    //会员登录
     public static final String QUERY_MEMBER_SQL =
             "SELECT `id`,`password`, `status` FROM `user` WHERE mobile = ?";
 

@@ -27,7 +27,7 @@ public class TokenCheckFilter implements GlobalFilter, Ordered {
     @Autowired
     private RedisTemplate redisTemplate;
 
-    @Value("${no.token.access.urls:/admin/login}")
+    @Value("${no.token.access.urls:/admin/login,/usr/gt/register,/user/login,/user/users/register,/user/sms/sendTo}")
     private Set<String> noTokenAccessUrls;
 
 
