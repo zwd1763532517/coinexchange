@@ -3,6 +3,9 @@ package com.bjsxt.controller;
 import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.bjsxt.domain.UserBank;
+import com.bjsxt.feign.UserBankServiceFeign;
+import com.bjsxt.mappers.UserBankDtoMapper;
+import com.bjsxt.model.dto.UserBankDto;
 import com.bjsxt.response.R;
 import com.bjsxt.service.UserBankService;
 import io.swagger.annotations.Api;
@@ -19,7 +22,7 @@ import springfox.documentation.annotations.ApiIgnore;
 @RestController
 @Api(tags = "会员银行卡管理")
 @RequestMapping("/userBanks")
-public class UserBankController {
+public class UserBankController implements UserBankServiceFeign {
 
     @Autowired
     private UserBankService userBankService;
@@ -92,4 +95,10 @@ public class UserBankController {
         return R.fail("绑定失败") ;
     }
 
+    @Override
+    public UserBankDto getUserBankInfo(Long userId) {
+        UserBank currentUserBank = userBankService.getUserBankByUserId(userId);
+        UserBankDto userBankDto = UserBankDtoMapper.INSTANCE.toConvertDto(currentUserBank);
+        return userBankDto ;
+    }
 }

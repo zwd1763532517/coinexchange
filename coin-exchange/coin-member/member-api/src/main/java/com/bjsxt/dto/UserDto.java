@@ -27,6 +27,13 @@ public class UserDto {
     private String username;
 
     /**
+     * 支付密码
+     */
+    @TableField(value = "paypassword")
+    @ApiModelProperty(value="支付密码")
+    private String paypassword;
+
+    /**
      * 国际电话区号
      */
     @TableField(value = "country_code")

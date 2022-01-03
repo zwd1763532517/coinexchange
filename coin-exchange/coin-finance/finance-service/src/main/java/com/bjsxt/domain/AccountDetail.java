@@ -137,4 +137,7 @@ public class AccountDetail {
             public static final String COL_REMARK="remark";
 
             public static final String COL_CREATED="created";
+
+    public AccountDetail(Object o, Long userId, Long coinId, Long id, Long id1, Long orderId, byte b, String type, BigDecimal mum, BigDecimal fee, String 用户提现, Object o1, Object o2, Object o3) {
+    }
 }
